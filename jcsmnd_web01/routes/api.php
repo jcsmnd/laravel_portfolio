@@ -20,3 +20,13 @@ Route::middleware('auth:api')->get('/user', function (Request $request) {
 Route::get('user/{id}', function ($id) {
     return 'User '.$id;
 });
+
+Route::get('inventories', 'InventoryController@index');
+
+Route::get('inventories/{id}', 'InventoryController@show');
+
+Route::post('inventories', 'InventoryController@store');
+
+Route::put('inventories', 'InventoryController@store');
+
+Route::delete('inventories/{id}', 'InventoryController@destroy');
